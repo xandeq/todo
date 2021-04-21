@@ -10,7 +10,10 @@ export const TodoContext = createContext<TodoContextType>({
 });
 
 const TodoProvider = (props: any) => {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([
+    { id: 1, title: "Ir ao supermercado", done: true },
+    { id: 2, title: "Ir a academia", done: false }
+  ]);
 
   const addTodo = (title: string) => {
     console.log("Adicionou " + title);
